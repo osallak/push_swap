@@ -6,8 +6,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
 
-# Make data base, printed on Mon Feb 28 14:59:30 2022
+# Make data base, printed on Tue Mar  1 00:02:24 2022
 
 # Variables
 
@@ -27,32 +28,28 @@ VSCODE_LOG_NATIVE = false
 CURDIR := /Users/osallak/Desktop/push_swap
 # makefile
 SHELL = /bin/sh
-# makefile (from `Makefile', line 30)
+# makefile (from `Makefile', line 31)
 RM = rm -rf
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
-# makefile (from `Makefile', line 33)
+# makefile (from `Makefile', line 34)
 CFLAGS = -Wall -Wextra -Werror
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
-# makefile (from `Makefile', line 3)
-SRCS = push_swap.c srcs/ft_strjoin.c srcs/ft_strlen.c srcs/ft_allocate.c srcs/ft_isdigit.c srcs/ft_strdup.c srcs/ft_atoi.c srcs/print_instruction.c parsing/ft_print_error.c parsing/args_join.c parsing/check_input.c parsing/ft_split.c parsing/ft_substr.c parsing/convert_input.c parsing/check_double.c lst_srcs/add_back.c lst_srcs/add_front.c lst_srcs/add_new.c lst_srcs/lstsize.c lst_srcs/init_list.c lst_srcs/lst_last.c sorting/sort_three.c moves/rotate.c moves/swap.c moves/reverse_rotate.c tmp_srcs/display_list.c 
 # environment
 VSCODE_VERBOSE_LOGGING = true
-# makefile (from `Makefile', line 32)
+# makefile (from `Makefile', line 33)
 OBJS = $(SRCS:%.c=%.o)
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cd14003389/T/vscode-ipc-2a94bd14-7b92-47b7-a19e-bb3d6e01edc9.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cd14003389/T/vscode-ipc-1f161ca6-387a-4772-9a99-c3998ebaa10f.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.yJyDanIkZS/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.rEd0pEFYRI/Render
 # environment
-PATH = /Users/osallak/goinfre/.brew/bin:/Users/osallak/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
-# environment
-LSCOLORS = Gxfxcxdxbxegedabagacad
+PATH = /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -60,11 +57,9 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.E9j2blu6B6/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.t6raMhRqx7/Listeners
 # automatic
 %F = $(notdir $%)
-# environment
-HOMEBREW_TEMP = /tmp/osallak/Homebrew/Temp
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -84,8 +79,6 @@ LOGNAME = osallak
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
-ZSH = /Users/osallak/.oh-my-zsh
-# environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
@@ -95,11 +88,11 @@ XPC_FLAGS = 0x0
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
-# environment
-HOMEBREW_CACHE = /tmp/osallak/Homebrew/Caches
+# makefile (from `Makefile', line 3)
+SRCS = push_swap.c srcs/ft_strjoin.c srcs/ft_strlen.c srcs/ft_allocate.c srcs/ft_isdigit.c srcs/ft_strdup.c srcs/ft_atoi.c srcs/print_instruction.c parsing/ft_print_error.c parsing/args_join.c parsing/check_input.c parsing/ft_split.c parsing/ft_substr.c parsing/convert_input.c parsing/check_double.c lst_srcs/add_back.c lst_srcs/add_front.c lst_srcs/add_new.c lst_srcs/lstsize.c lst_srcs/init_list.c lst_srcs/lst_last.c lst_srcs/get_indexes.c sorting/sort_three.c moves/rotate.c moves/swap.c moves/reverse_rotate.c tmp_srcs/display_list.c 
 # environment
 SHLVL = 1
-# makefile (from `Makefile', line 31)
+# makefile (from `Makefile', line 32)
 CC = cc
 # default
 MAKE_VERSION := 3.81
@@ -109,8 +102,6 @@ USER = osallak
 .DEFAULT_GOAL := all
 # makefile (from `Makefile', line 1)
 NAME = push_swap
-# environment
-LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
@@ -143,16 +134,12 @@ __CF_USER_TEXT_ENCODING = 0x18D09:0x0:0x0
 COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
-# environment
-HOMEBREW_NO_AUTO_UPDATE = 1
 # automatic
 <F = $(notdir $<)
 # environment
-PAGER = less
-# environment
 LC_ALL = C
 # environment
-SECURITYSESSIONID = 186a7
+SECURITYSESSIONID = 186a8
 # automatic
 ^F = $(notdir $^)
 # default
@@ -164,9 +151,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 43096
+VSCODE_PID = 3351
 # variable set hash-table stats:
-# Load=77/1024=8%, Rehash=0, Collisions=5/111=5%
+# Load=70/1024=7%, Rehash=0, Collisions=3/104=3%
 
 # Pattern-specific Variable Values
 
@@ -182,7 +169,7 @@ VSCODE_PID = 43096
 # Implicit Rules
 
 %.o: %.c include/push_swap.h
-#  commands to execute (from `Makefile', line 41):
+#  commands to execute (from `Makefile', line 42):
 	$(CC) $(CFLAGS) -c $< -I $(INC) -o $@
 	
 
@@ -205,7 +192,7 @@ srcs/print_instruction.o:
 # Not a target:
 push_swap.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-02-28 02:39:53
+#  Last modified 2022-02-28 23:33:20
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -277,7 +264,7 @@ sorting/sort_three.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-02-27 21:01:33
+#  Last modified 2022-03-01 00:02:11
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -290,9 +277,15 @@ lst_srcs/init_list.o:
 #  File has not been updated.
 
 # Not a target:
+lst_srcs/get_indexes.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 include/push_swap.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-02-27 21:01:07
+#  Last modified 2022-03-01 00:00:42
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -306,10 +299,9 @@ lst_srcs/lstsize.o:
 
 fclean: clean
 #  Implicit rule search has not been done.
- 
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 46):
+#  commands to execute (from `Makefile', line 47):
 	$(RM) $(NAME)
 	
 
@@ -328,6 +320,7 @@ moves/swap.o:
 # Not a target:
 moves/reverse_rotate.o:
 #  Implicit rule search has not been done.
+ 
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -335,7 +328,7 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 44):
+#  commands to execute (from `Makefile', line 45):
 	$(RM) $(OBJS)
 	
 
@@ -363,18 +356,18 @@ push_swap.o: push_swap.c include/push_swap.h
 # ? := push_swap.c include/push_swap.h
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=1/15=7%
-#  commands to execute (from `Makefile', line 41):
+#  commands to execute (from `Makefile', line 42):
 	$(CC) $(CFLAGS) -c $< -I $(INC) -o $@
 	
 
-push_swap: push_swap.o srcs/ft_strjoin.o srcs/ft_strlen.o srcs/ft_allocate.o srcs/ft_isdigit.o srcs/ft_strdup.o srcs/ft_atoi.o srcs/print_instruction.o parsing/ft_print_error.o parsing/args_join.o parsing/check_input.o parsing/ft_split.o parsing/ft_substr.o parsing/convert_input.o parsing/check_double.o lst_srcs/add_back.o lst_srcs/add_front.o lst_srcs/add_new.o lst_srcs/lstsize.o lst_srcs/init_list.o lst_srcs/lst_last.o sorting/sort_three.o moves/rotate.o moves/swap.o moves/reverse_rotate.o tmp_srcs/display_list.o
+push_swap: push_swap.o srcs/ft_strjoin.o srcs/ft_strlen.o srcs/ft_allocate.o srcs/ft_isdigit.o srcs/ft_strdup.o srcs/ft_atoi.o srcs/print_instruction.o parsing/ft_print_error.o parsing/args_join.o parsing/check_input.o parsing/ft_split.o parsing/ft_substr.o parsing/convert_input.o parsing/check_double.o lst_srcs/add_back.o lst_srcs/add_front.o lst_srcs/add_new.o lst_srcs/lstsize.o lst_srcs/init_list.o lst_srcs/lst_last.o lst_srcs/get_indexes.o sorting/sort_three.o moves/rotate.o moves/swap.o moves/reverse_rotate.o tmp_srcs/display_list.o
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/5=0%
-#  commands to execute (from `Makefile', line 38):
+#  commands to execute (from `Makefile', line 39):
 	$(CC) -g $(CFLAGS) $^ -o $@
 	
 
@@ -445,7 +438,7 @@ srcs/ft_atoi.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=35/1024=3%, Rehash=0, Collisions=0/81=0%
+# Load=36/1024=4%, Rehash=0, Collisions=0/83=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -457,6 +450,6 @@ srcs/ft_atoi.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon Feb 28 14:59:31 2022
+# Finished Make data base on Tue Mar  1 00:02:24 2022
 
  

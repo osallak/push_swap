@@ -1,4 +1,4 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/osallak/Desktop/push_swap'
 cc -Wall -Wextra -Werror -c push_swap.c -I include -o push_swap.o
 cc -Wall -Wextra -Werror -c srcs/ft_strjoin.c -I include -o srcs/ft_strjoin.o
@@ -21,11 +21,12 @@ cc -Wall -Wextra -Werror -c lst_srcs/add_new.c -I include -o lst_srcs/add_new.o
 cc -Wall -Wextra -Werror -c lst_srcs/lstsize.c -I include -o lst_srcs/lstsize.o
 cc -Wall -Wextra -Werror -c lst_srcs/init_list.c -I include -o lst_srcs/init_list.o
 cc -Wall -Wextra -Werror -c lst_srcs/lst_last.c -I include -o lst_srcs/lst_last.o
+cc -Wall -Wextra -Werror -c lst_srcs/get_indexes.c -I include -o lst_srcs/get_indexes.o
 cc -Wall -Wextra -Werror -c sorting/sort_three.c -I include -o sorting/sort_three.o
 cc -Wall -Wextra -Werror -c moves/rotate.c -I include -o moves/rotate.o
 cc -Wall -Wextra -Werror -c moves/swap.c -I include -o moves/swap.o
 cc -Wall -Wextra -Werror -c moves/reverse_rotate.c -I include -o moves/reverse_rotate.o
 cc -Wall -Wextra -Werror -c tmp_srcs/display_list.c -I include -o tmp_srcs/display_list.o
-cc -g -Wall -Wextra -Werror push_swap.o srcs/ft_strjoin.o srcs/ft_strlen.o srcs/ft_allocate.o srcs/ft_isdigit.o srcs/ft_strdup.o srcs/ft_atoi.o srcs/print_instruction.o parsing/ft_print_error.o parsing/args_join.o parsing/check_input.o parsing/ft_split.o parsing/ft_substr.o parsing/convert_input.o parsing/check_double.o lst_srcs/add_back.o lst_srcs/add_front.o lst_srcs/add_new.o lst_srcs/lstsize.o lst_srcs/init_list.o lst_srcs/lst_last.o sorting/sort_three.o moves/rotate.o moves/swap.o moves/reverse_rotate.o tmp_srcs/display_list.o -o push_swap
+cc -g -Wall -Wextra -Werror push_swap.o srcs/ft_strjoin.o srcs/ft_strlen.o srcs/ft_allocate.o srcs/ft_isdigit.o srcs/ft_strdup.o srcs/ft_atoi.o srcs/print_instruction.o parsing/ft_print_error.o parsing/args_join.o parsing/check_input.o parsing/ft_split.o parsing/ft_substr.o parsing/convert_input.o parsing/check_double.o lst_srcs/add_back.o lst_srcs/add_front.o lst_srcs/add_new.o lst_srcs/lstsize.o lst_srcs/init_list.o lst_srcs/lst_last.o lst_srcs/get_indexes.o sorting/sort_three.o moves/rotate.o moves/swap.o moves/reverse_rotate.o tmp_srcs/display_list.o -o push_swap
 make: Leaving directory `/Users/osallak/Desktop/push_swap'
  

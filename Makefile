@@ -21,6 +21,7 @@ SRCS = push_swap.c \
 		lst_srcs/lstsize.c\
 		lst_srcs/init_list.c\
 		lst_srcs/lst_last.c\
+		lst_srcs/get_indexes.c\
 		sorting/sort_three.c\
 		moves/rotate.c\
 		moves/swap.c\
