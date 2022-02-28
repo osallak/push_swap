@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 14:58:59 by osallak           #+#    #+#             */
-/*   Updated: 2022/02/24 19:42:17 by osallak          ###   ########.fr       */
+/*   Updated: 2022/02/27 20:56:56 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,20 +25,20 @@ static void	sort(t_stack *a)
 		return ;
 	else if (first < second && second > third && first < third)
 	{
-		rra(a);
-		sa(a);
+		reverse_rotate(&a, "rra\n");
+		swap(a, "sa\n");
 	}
 	else if (first > second && second < third && first < third)
-		sa(a);
+		swap(a, "sa\n");
 	else if (first < second && second > third && third < first)
-		rra(a);
+		reverse_rotate(&a, "rra\n");
 	else if (first > second && second > third)
 	{
-		ra(a);
-		sa(a);
+		rotate(a, "ra\n");
+		swap(a, "sa\n");
 	}
 	else
-		ra(a);
+		rotate(a, "ra\n");
 }
 
 void	sort_three(t_stack *a)
@@ -52,7 +52,7 @@ void	sort_three(t_stack *a)
 	{
 		if (a->content > a->next->content)
 		{
-			sa(a);
+			swap(a, "sa\n");
 			return ;
 		}
 		return ;

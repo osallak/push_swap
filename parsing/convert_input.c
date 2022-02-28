@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 20:03:24 by osallak           #+#    #+#             */
-/*   Updated: 2022/02/26 19:55:45 by osallak          ###   ########.fr       */
+/*   Updated: 2022/02/27 15:40:23 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,5 @@ t_args	convert_input(char **input)
 	}
 	ret.args = args;
 	free(input);
-	return (ret);//todo free
+	return (ret); //todo free
 }

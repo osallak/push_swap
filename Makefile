@@ -25,6 +25,7 @@ SRCS = push_swap.c \
 		moves/rotate.c\
 		moves/swap.c\
 		moves/reverse_rotate.c\
+		tmp_srcs/display_list.c\
 
 RM = rm -rf
 CC = cc
@@ -34,7 +35,7 @@ CFLAGS = -Wall -Wextra -Werror
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-		$(CC) $(CFLAGS) $^ -o $@
+		$(CC) -g $(CFLAGS) $^ -o $@
 
 %.o : %.c $(INC)/push_swap.h
 		$(CC) $(CFLAGS) -c $< -I $(INC) -o $@
