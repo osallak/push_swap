@@ -1,4 +1,4 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/osallak/Desktop/push_swap'
 cc -Wall -Wextra -Werror -c push_swap.c -I include -o push_swap.o
 cc -Wall -Wextra -Werror -c srcs/ft_strjoin.c -I include -o srcs/ft_strjoin.o

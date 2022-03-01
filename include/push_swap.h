@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:59:21 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/01 00:04:17 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/01 15:31:14 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,11 @@ int	get_max(t_stack *stack);
 int	get_min(t_stack *stack);
 //moves
 void	swap(t_stack *stack, char *move);
-void	sort_three(t_stack *a);
 void	rotate(t_stack *stack, char *move);
 void	rr(t_stack *a, t_stack *b);
 void	reverse_rotate(t_stack **a, char *move);
 //tmp sources
 void	display(t_stack *lst);
 //sorting
-void	sort_three(t_stack *a);
+void	sort_three(t_stack **a);
 #endif
