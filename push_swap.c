@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:58:05 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/01 16:53:32 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/03 01:10:46 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,14 @@ static char	**parser(int ac, char **av)
 int	main(int ac, char **av)
 {
 	t_stack	*a;
+	t_stack	*b;
 	int		size;
 
 	a = init_list(check_double(convert_input(parser(ac, av))));
 	size = ft_lstsize(a);
+	b = NULL;
 	if (size == 3)
 		sort_three(&a);
+	sort_five(&a, &b);
 	display(a);
 }

@@ -22,9 +22,10 @@ SRCS = push_swap.c \
 		lst_srcs/init_list.c\
 		lst_srcs/lst_last.c\
 		lst_srcs/get_indexes.c\
-		sorting/sort_three.c\
+		sorting/sort_five.c\
 		moves/rotate.c\
 		moves/swap.c\
+		moves/push.c\
 		moves/reverse_rotate.c\
 		tmp_srcs/display_list.c\
 
@@ -36,7 +37,7 @@ CFLAGS = -Wall -Wextra -Werror
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-		$(CC) -g $(CFLAGS) $^ -o $@
+		$(CC) $(CFLAGS) $^ -o $@
 
 %.o : %.c $(INC)/push_swap.h
 		$(CC) $(CFLAGS) -c $< -I $(INC) -o $@

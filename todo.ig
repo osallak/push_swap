@@ -1,2 +1,1 @@
-error in sort three
-done with 3 and 5 
+find 2 min numbers and push'em to b then sort three a then push b push b 
