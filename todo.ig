@@ -1,1 +1,2 @@
-find 2 min numbers and push'em to b then sort three a then push b push b 
+add is sorted function 
+infinite loop in sort five

@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 21:59:25 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/03 01:11:51 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/04 22:31:26 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,10 @@ void	sort_five(t_stack **a, t_stack **b)
 	{
 		min_index = get_min(*a);
 		if (min_index <= (len / 2))
-			while (min_index--)
+		{
+			while (min_index-- > 0)
 				rotate(*a, "ra\n");
+		}
 		else
 			while ((len - min_index++))
 				reverse_rotate(a, "rra\n");

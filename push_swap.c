@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:58:05 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/03 01:10:46 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/05 00:14:14 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,22 @@ static char	**parser(int ac, char **av)
 	return (ft_split(joined, ' '));
 }
 
+bool	is_sorted(t_stack *stack)
+{
+	int	i;
+	int size;
+
+	i = 0;
+	size = ft_lstsize(stack);
+	while (stack && stack->next && stack->content < stack->next->content)
+	{
+		stack = stack->next;
+		i++;
+	}
+	printf("%d\n", i);
+	return (i == (size - 1));
+}
+
 int	main(int ac, char **av)
 {
 	t_stack	*a;
@@ -35,5 +51,5 @@ int	main(int ac, char **av)
 	if (size == 3)
 		sort_three(&a);
 	sort_five(&a, &b);
-	display(a);
+	// display(a);
 }

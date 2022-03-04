@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 21:13:11 by osallak           #+#    #+#             */
-/*   Updated: 2022/02/27 20:57:36 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/04 10:53:20 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,4 @@ int	ft_lstsize(t_stack *lst)
 		lst = lst->next;
 	}
 	return (size);
-} 
+}
