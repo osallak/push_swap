@@ -28,6 +28,8 @@ SRCS = push_swap.c \
 		moves/push.c\
 		moves/reverse_rotate.c\
 		tmp_srcs/display_list.c\
+		sorting/inverse_sort.c\
+		sorting/sort.c
 
 RM = rm -rf
 CC = cc

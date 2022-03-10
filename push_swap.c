@@ -6,13 +6,13 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:58:05 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/05 00:14:14 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/10 20:38:18 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
 
-static char	**parser(int ac, char **av)
+char	**parser(int ac, char **av)
 {
 	char	*joined;
 
@@ -51,5 +51,5 @@ int	main(int ac, char **av)
 	if (size == 3)
 		sort_three(&a);
 	sort_five(&a, &b);
-	// display(a);
+	display(a);
 }

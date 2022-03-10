@@ -1,2 +1,2 @@
-add is sorted function 
-infinite loop in sort five
+find markup head 
+add bool variable to the struct

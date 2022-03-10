@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:59:21 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/04 10:53:04 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/10 20:20:07 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ t_args	convert_input(char **input);
 int		ft_atoi(char *s);
 t_args	check_double(t_args args);
 void	print(char *message);
+bool	is_sorted(t_stack *stack);
+char	**parser(int ac, char **av);
 //lst functions
 t_stack	*ft_add_new(int content);
 void	add_back(t_stack **head, t_stack *new);
@@ -63,4 +65,8 @@ void	display(t_stack *lst);
 //sorting
 void	sort_three(t_stack **a);
 void	sort_five(t_stack **a, t_stack **b);
+void	inverse_sort_three(t_stack **b);
+int		virtual_sort(t_stack **stack);
+void	sort_a(t_stack *a, t_stack *b, int len);
+void	sort_b(t_stack *a, t_stack *b, int len);
 #endif
