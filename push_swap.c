@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:58:05 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/10 20:38:18 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/10 22:01:08 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,10 @@ int	main(int ac, char **av)
 	a = init_list(check_double(convert_input(parser(ac, av))));
 	size = ft_lstsize(a);
 	b = NULL;
-	if (size == 3)
-		sort_three(&a);
-	sort_five(&a, &b);
+	// if (size == 3)
+	// 	sort_three(&a);
+	// sort_five(&a, &b);
+	// sort_a(&a, &b, size);
+	inverse_sort_three(&a, size);
 	display(a);
 }

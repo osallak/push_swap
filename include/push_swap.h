@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:59:21 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/10 20:20:07 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/10 21:34:52 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,8 @@ void	display(t_stack *lst);
 //sorting
 void	sort_three(t_stack **a);
 void	sort_five(t_stack **a, t_stack **b);
-void	inverse_sort_three(t_stack **b);
+void	inverse_sort_three(t_stack **b, int len);
 int		virtual_sort(t_stack **stack);
-void	sort_a(t_stack *a, t_stack *b, int len);
-void	sort_b(t_stack *a, t_stack *b, int len);
+void	sort_a(t_stack **a, t_stack **b, int len);
+void	sort_b(t_stack **a, t_stack **b, int len);
 #endif
