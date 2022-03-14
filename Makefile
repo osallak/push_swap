@@ -22,19 +22,20 @@ SRCS = push_swap.c \
 		lst_srcs/init_list.c\
 		lst_srcs/lst_last.c\
 		lst_srcs/get_indexes.c\
-		sorting/sort_five.c\
 		moves/rotate.c\
 		moves/swap.c\
 		moves/push.c\
 		moves/reverse_rotate.c\
-		tmp_srcs/display_list.c\
+		sorting/sort_five.c\
 		sorting/inverse_sort.c\
-		sorting/sort.c
+		sorting/sort.c\
+		sorting/optimise.c\
+		tmp_srcs/display_list.c
 
 RM = rm -rf
 CC = cc
 OBJS = $(SRCS:%.c=%.o)
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 all : $(NAME)
 
