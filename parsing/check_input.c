@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 13:52:00 by osallak           #+#    #+#             */
-/*   Updated: 2022/02/23 22:25:22 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/14 20:47:39 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	check_input(char *input)
 		if (!ft_isdigit(input[i]) && input[i] != ' '\
 			&& input[i] != '+' && input[i] != '-')
 		{
-			free(input);//allocated in strjoin
+			free(input);
 			ft_print_error("Syntax Error");
 		}
 	}

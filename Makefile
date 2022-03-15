@@ -29,13 +29,13 @@ SRCS = push_swap.c \
 		sorting/sort_five.c\
 		sorting/inverse_sort.c\
 		sorting/sort.c\
-		sorting/optimise.c\
+		sorting/push_up_rotated.c\
 		tmp_srcs/display_list.c
 
 RM = rm -rf
 CC = cc
 OBJS = $(SRCS:%.c=%.o)
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 
 all : $(NAME)
 

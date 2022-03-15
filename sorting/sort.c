@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 01:06:08 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/14 17:38:25 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/14 20:46:44 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,24 +69,16 @@ void	sort_a(t_stack **a, t_stack **b, int len)
 	ra = 0;
 	i = 0;
 	if (len <= 3)
-	{
 		sort_three_full_list(a, len);
+	if (len <= 3)
 		return ;
-	}
 	pivot = virtual_sort(a, len);
-	while (i < len)
+	while (i++ < len)
 	{
-		if ((*a)->content < pivot)
-		{
+		if ((*a)->content < pivot && ++pb)
 			push(a, b, "pb\n");
-			pb++;
-		}
-		else
-		{
+		else if ((*a)->content >= pivot && ++ra)
 			rotate(*a, "ra\n");
-			ra++;
-		}
-		i++;
 	}
 	push_up_rotated_a(a, ra);
 	sort_a(a, b, (len - pb));
@@ -106,23 +98,16 @@ void	sort_b(t_stack **a, t_stack **b, int len)
 	rb = 0;
 	i = 0;
 	if (len <= 3)
-	{
 		inverse_sort_three(b, len);
+	if (len <= 3)
 		return ;
-	}
 	pivot = virtual_sort(b, len);
 	while (*b && i++ < len)
 	{
-		if ((*b)->content > pivot)
-		{
+		if ((*b)->content > pivot && ++pa)
 			push(b, a, "pa\n");
-			pa++;
-		}
-		else
-		{
+		else if ((*b)->content <= pivot && ++rb)
 			rotate(*b, "rb\n");
-			rb++;
-		}
 	}
 	sort_a(a, b, pa);
 	push_up_rotated_b(b, rb);

@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 21:59:25 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/11 01:15:49 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/14 20:52:00 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	sort_three(t_stack **a)
 		else if (max == 1)
 			reverse_rotate(a, "rra\n");
 		if ((*a)->content > (*a)->next->content)
-			swap(*a, "sa\n");	
+			swap(*a, "sa\n");
 	}
 }
 
