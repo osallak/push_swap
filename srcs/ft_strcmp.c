@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 14:53:40 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/15 11:48:09 by osallak          ###   ########.fr       */
+/*   Created: 2022/03/15 13:28:40 by osallak           #+#    #+#             */
+/*   Updated: 2022/03/15 14:55:22 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"push_swap.h"
+#include "push_swap.h"
 
-void	swap(t_stack *stack, char *move, t_list **opt)
+bool	ft_strcmp(char *s1, char *s2)
 {
-	int	tmp;
+	size_t	i;
 
-	if (!stack || !stack->next)
-		return ;
-	tmp = stack->content;
-	stack->content = stack->next->content;
-	stack->next->content = tmp;
-	optimize(move, opt);
-}
-
-void	ss(t_stack *a, t_stack *b, t_list **opt)
-{
-	swap(a, "sa\n", opt);
-	swap(b, "sb\n", opt);
+	i = 0;
+	while ((s1[i] || s2[i]))
+	{
+		if (s1[i] != s2[i])
+			return (false);
+		i++;
+	}
+	return (true);
 }

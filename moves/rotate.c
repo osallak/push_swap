@@ -6,13 +6,13 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 18:17:19 by osallak           #+#    #+#             */
-/*   Updated: 2022/02/26 23:42:55 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/15 11:33:38 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
 
-void	rotate(t_stack *stack, char *message)
+void	rotate(t_stack *stack, char *move, t_list **opt)
 {
 	int	holder;
 
@@ -25,11 +25,11 @@ void	rotate(t_stack *stack, char *message)
 		stack = stack->next;
 	}
 	stack->content = holder;
-	print(message);
+	optimize(move, opt);
 }
 
-void	rr(t_stack *a, t_stack *b)
+void	rr(t_stack *a, t_stack *b, t_list **opt)
 {
-	rotate(a, "sa\n");
-	rotate(b, "sb\n");
+	rotate(a, "ra\n", opt);
+	rotate(b, "rb\n", opt);
 }

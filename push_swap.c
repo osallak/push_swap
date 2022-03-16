@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:58:05 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/15 10:51:48 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/16 16:59:25 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,44 @@ char	**parser(int ac, char **av)
 	return (ft_split(joined, ' '));
 }
 
-bool	is_sorted(t_stack *stack)
+void	reduce_instructions(t_list **opt)
 {
-	int	i;
-	int	size;
+	check_swap(opt);
+	check_push(opt);
+	check_r_a(opt);
+	check_r_b(opt);
+	check_rrr(opt);
+	check_ss(opt);
+	check_rr(opt);
+	display_moves(*opt);
+}
 
-	i = 0;
-	size = ft_lstsize(stack);
-	while (stack && stack->next && stack->content < stack->next->content)
+void	free_stack(t_stack *a)
+{
+	t_stack	*tmp;
+
+	if (!a)
+		return ;
+	while (a)
 	{
-		stack = stack->next;
-		i++;
+		tmp = a;
+		free(tmp);
+		a = a->next;
 	}
-	printf("%d\n", i);
-	return (i == (size - 1));
+}
+
+void	free_list(t_list *opt)
+{
+	t_list	*tmp;
+
+	if (!opt)
+		return ;
+	while (opt)
+	{
+		tmp = opt;
+		free_node(tmp);
+		opt = opt->next;
+	}
 }
 
 int	main(int ac, char **av)
@@ -49,9 +73,18 @@ int	main(int ac, char **av)
 	a = init_list(check_double(convert_input(parser(ac, av))));
 	size = ft_lstsize(a);
 	b = NULL;
-	// if (size == 3)
-	// 	sort_three(&a);
-	// sort_five(&a, &b);
-	sort_a(&a, &b, &opt, size);
-	// display(a, "a ");
+	opt = NULL;
+	if (size <= 5)
+	{
+		if (size <= 3)
+			sort_three(&a, &opt);
+		else
+			sort_five(&a, &b, &opt);
+		display_moves(opt);
+		return (0);
+	}
+	sort_a(&a, &b, size, &opt);
+	reduce_instructions(&opt);
+	free_stack(a);
+	free_list(opt);
 }

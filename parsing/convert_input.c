@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 20:03:24 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/14 23:17:01 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/15 13:17:57 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,7 @@ t_args	convert_input(char **input)
 			ft_free(input, len);
 			ft_print_error("Number out of range");
 		}
-		printf("%lld\n", num);
-		ret.args[len] = (int)num;
+		args[len] = (int)num;
 		free(input[len]);
 		len++;
 	}

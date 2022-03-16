@@ -6,13 +6,13 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 18:36:47 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/01 00:09:46 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/15 11:30:59 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
 
-void	reverse_rotate(t_stack **a, char *move)
+void	reverse_rotate(t_stack **a, char *move, t_list **opt)
 {
 	t_stack	*tmp;
 	t_stack	*node;
@@ -25,5 +25,5 @@ void	reverse_rotate(t_stack **a, char *move)
 	tmp = node->next;
 	add_front(a, tmp);
 	node->next = NULL;
-	print(move);
+	optimize(move, opt);
 }

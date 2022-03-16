@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 01:06:08 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/14 20:46:44 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/15 11:35:44 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	virtual_sort(t_stack **stack, int len)
 	return (pivot);
 }
 
-void	sort_a(t_stack **a, t_stack **b, int len)
+void	sort_a(t_stack **a, t_stack **b, int len, t_list **opt)
 {
 	int		pivot;
 	int		pb;
@@ -69,25 +69,25 @@ void	sort_a(t_stack **a, t_stack **b, int len)
 	ra = 0;
 	i = 0;
 	if (len <= 3)
-		sort_three_full_list(a, len);
+		sort_three_full_list(a, len, opt);
 	if (len <= 3)
 		return ;
 	pivot = virtual_sort(a, len);
 	while (i++ < len)
 	{
 		if ((*a)->content < pivot && ++pb)
-			push(a, b, "pb\n");
+			push(a, b, "pb\n", opt);
 		else if ((*a)->content >= pivot && ++ra)
-			rotate(*a, "ra\n");
+			rotate(*a, "ra\n", opt);
 	}
-	push_up_rotated_a(a, ra);
-	sort_a(a, b, (len - pb));
-	sort_b(a, b, pb);
+	push_up_rotated_a(a, ra, opt);
+	sort_a(a, b, (len - pb), opt);
+	sort_b(a, b, pb, opt);
 	while (pb-- > 0)
-		push(b, a, "pa\n");
+		push(b, a, "pa\n", opt);
 }
 
-void	sort_b(t_stack **a, t_stack **b, int len)
+void	sort_b(t_stack **a, t_stack **b, int len, t_list **opt)
 {
 	int		pivot;
 	int		pa;
@@ -98,20 +98,20 @@ void	sort_b(t_stack **a, t_stack **b, int len)
 	rb = 0;
 	i = 0;
 	if (len <= 3)
-		inverse_sort_three(b, len);
+		inverse_sort_three(b, len, opt);
 	if (len <= 3)
 		return ;
 	pivot = virtual_sort(b, len);
 	while (*b && i++ < len)
 	{
 		if ((*b)->content > pivot && ++pa)
-			push(b, a, "pa\n");
+			push(b, a, "pa\n", opt);
 		else if ((*b)->content <= pivot && ++rb)
-			rotate(*b, "rb\n");
+			rotate(*b, "rb\n", opt);
 	}
-	sort_a(a, b, pa);
-	push_up_rotated_b(b, rb);
-	sort_b(a, b, len - pa);
+	sort_a(a, b, pa, opt);
+	push_up_rotated_b(b, rb, opt);
+	sort_b(a, b, (len - pa), opt);
 	while (pa-- > 0)
-		push(a, b, "pb\n");
+		push(a, b, "pb\n", opt);
 }

@@ -6,46 +6,36 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 20:58:29 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/14 20:50:26 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/15 12:40:16 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
 
-void	ft_putchar_fd(char c, int fd)
-{
-	write (fd, &c, 1);
-}
-
-void	ft_putnbr_fd(int n, int fd)
-{
-	if (n < 0)
-	{
-		ft_putchar_fd('-', fd);
-		n = -n;
-	}
-	if (n <= 9)
-		ft_putchar_fd((n + 48), fd);
-	else if (n > 9)
-	{
-		ft_putnbr_fd((n / 10), fd);
-		ft_putchar_fd(((n % 10) + 48), fd);
-	}
-}
-
-void	display(t_stack *lst, char *s)
+void	display_moves(t_list *lst)
 {
 	if (!lst)
 	{
 		write(1, "Empty list\n", 11);
 		return ;
 	}
-	write (1, s, ft_strlen(s));
 	while (lst)
 	{
-		ft_putnbr_fd(lst->content, 1);
-		write (1, " ", 1);
+		printf("%s", lst->move);
 		lst = lst->next;
 	}
-	write (1, "\n", 1);
+}
+
+void	display(t_stack *stack)
+{
+	if (!stack)
+	{
+		write(1, "Empty list\n", 11);
+		return ;
+	}
+	while (stack)
+	{
+		printf("%d ", stack->content);
+		stack = stack->next;
+	}
 }

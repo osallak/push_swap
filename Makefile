@@ -8,6 +8,8 @@ SRCS = push_swap.c \
 		srcs/ft_strdup.c\
 		srcs/ft_atoi.c\
 		srcs/print_instruction.c\
+		srcs/ft_strcmp.c\
+		srcs/is_sorted.c\
 		parsing/ft_print_error.c\
 		parsing/args_join.c\
 		parsing/check_input.c\
@@ -30,12 +32,16 @@ SRCS = push_swap.c \
 		sorting/inverse_sort.c\
 		sorting/sort.c\
 		sorting/push_up_rotated.c\
+		sorting/optimize.c\
+		sorting/opt_utils.c\
+		sorting/opt_ss_rr.c\
 		tmp_srcs/display_list.c
+
 
 RM = rm -rf
 CC = cc
 OBJS = $(SRCS:%.c=%.o)
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 all : $(NAME)
 

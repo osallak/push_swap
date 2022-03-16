@@ -9,7 +9,7 @@
 			"type": "cppdbg",
 			"request": "launch",
 			"program": "${workspaceFolder}/push_swap",
-			"args": ["5", "7", "3", "2", "4", "0", "1", "6"],
+			"args": ["4", "2", "5", "7", "4356", "57"],
 			"stopAtEntry": false,
 			"cwd": "/Users/osallak/Desktop/push_swap",
 			"environment": [],
