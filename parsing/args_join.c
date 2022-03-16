@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 19:46:10 by osallak           #+#    #+#             */
-/*   Updated: 2022/02/21 19:22:35 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/16 20:52:09 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static void	check_single_arg(char *arg, char *joined)
 		if (ft_isdigit(arg[i]))
 			return ;
 	free(joined);
-	ft_print_error("Syntax error");
+	ft_print_error("Error");
 }
 
 char	*join_args(char **argv)
@@ -56,7 +56,10 @@ char	*join_args(char **argv)
 	while (argv[i])
 	{
 		if (!*argv[i])
+		{
+			free(ret);
 			ft_print_error("Error : empty String");
+		}
 		check_single_arg(argv[i], ret);
 		ret = join(ret, argv[i++]);
 	}

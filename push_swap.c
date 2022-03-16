@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:58:05 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/16 16:59:25 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/16 23:10:06 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,31 +35,28 @@ void	reduce_instructions(t_list **opt)
 	display_moves(*opt);
 }
 
-void	free_stack(t_stack *a)
+void	ft_free(t_stack *a, t_list *opt)
 {
 	t_stack	*tmp;
+	t_list	*tmp2;
 
-	if (!a)
-		return ;
-	while (a)
+	if (a)
 	{
-		tmp = a;
-		free(tmp);
-		a = a->next;
+		while (a)
+		{
+			tmp = a;
+			free(tmp);
+			a = a->next;
+		}
 	}
-}
-
-void	free_list(t_list *opt)
-{
-	t_list	*tmp;
-
-	if (!opt)
-		return ;
-	while (opt)
-	{
-		tmp = opt;
-		free_node(tmp);
-		opt = opt->next;
+	if (opt)
+	{	
+		while (opt)
+		{
+			tmp2 = opt;
+			free_node(tmp2);
+			opt = opt->next;
+		}
 	}
 }
 
@@ -71,9 +68,11 @@ int	main(int ac, char **av)
 	int		size;
 
 	a = init_list(check_double(convert_input(parser(ac, av))));
-	size = ft_lstsize(a);
 	b = NULL;
 	opt = NULL;
+	if (is_sorted(a))
+		return (ft_free(a, opt), 0);
+	size = ft_lstsize(a);
 	if (size <= 5)
 	{
 		if (size <= 3)
@@ -81,10 +80,10 @@ int	main(int ac, char **av)
 		else
 			sort_five(&a, &b, &opt);
 		display_moves(opt);
+		ft_free(a, opt);
 		return (0);
 	}
 	sort_a(&a, &b, size, &opt);
 	reduce_instructions(&opt);
-	free_stack(a);
-	free_list(opt);
+	ft_free(a, opt);
 }

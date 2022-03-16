@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:59:21 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/16 16:37:31 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/16 20:23:03 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ char		*ft_strdup(char	*s);
 t_args		convert_input(char **input);
 long long	ft_atoi(char *s);
 t_args		check_double(t_args args);
-void		print(char *message);
 bool		is_sorted(t_stack *stack);
 char		**parser(int ac, char **av);
 bool		ft_strcmp(char *s1, char *s2);
@@ -70,9 +69,7 @@ void		rr(t_stack *a, t_stack *b, t_list **opt);
 void		reverse_rotate(t_stack **a, char *move, t_list **opt);
 void		push(t_stack **a, t_stack **b, char *move, t_list **opt);
 void		ss(t_stack *a, t_stack *b, t_list **opt);
-//tmp sources
 void		display_moves(t_list *lst);
-void		display(t_stack *stack);
 //sorting
 void		sort_three(t_stack **a, t_list **opt);
 void		sort_five(t_stack **a, t_stack **b, t_list **opt);
@@ -99,4 +96,6 @@ void		check_r_b(t_list **opt);
 void		check_rrr(t_list **opt);
 void		check_ss(t_list **opt);
 void		check_rr(t_list **opt);
+//checker srcs
+char		*get_next_line(int fd);
 #endif

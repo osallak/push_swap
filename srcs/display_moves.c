@@ -1,41 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_input.c                                      :+:      :+:    :+:   */
+/*   display_moves.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/20 13:52:00 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/16 20:52:26 by osallak          ###   ########.fr       */
+/*   Created: 2022/03/16 17:06:19 by osallak           #+#    #+#             */
+/*   Updated: 2022/03/16 17:19:09 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
 
-void	check_input(char *input)
+static void	print(char *s)
 {
-	int	i;
+	while (*s)
+		write(1, s++, 1);
+}
 
-	i = -1;
-	while (input[++i])
+void	display_moves(t_list *lst)
+{
+	t_list	*tmp;
+
+	if (!lst)
+		return ;
+	tmp = lst;
+	while (tmp)
 	{
-		if (!ft_isdigit(input[i]) && input[i] != ' '\
-			&& input[i] != '+' && input[i] != '-')
-		{
-			free(input);
-			ft_print_error("Error");
-		}
-	}
-	i = -1;
-	while (input[++i])
-	{
-		if (input[i] == '+' || input[i] == '-')
-		{
-			if (!ft_isdigit(input[i + 1]) || input[i - 1] != ' ')
-			{
-				free(input);
-				ft_print_error("Syntax Error");
-			}
-		}
+		print(tmp->move);
+		tmp = tmp->next;
 	}
 }
