@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_instruction.c                                :+:      :+:    :+:   */
+/*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/26 17:26:19 by osallak           #+#    #+#             */
-/*   Updated: 2022/02/26 19:57:43 by osallak          ###   ########.fr       */
+/*   Created: 2022/03/17 22:30:13 by osallak           #+#    #+#             */
+/*   Updated: 2022/03/17 22:30:24 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
 
-void	print(char *message)
+char	**parser(int ac, char **av)
 {
-	write (1, message, ft_strlen(message));
+	char	*joined;
+
+	if (ac == 1)
+		ft_print_error("Error");
+	joined = join_args(av);
+	check_input(joined);
+	return (ft_split(joined, ' '));
 }

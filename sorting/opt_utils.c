@@ -6,17 +6,11 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 00:14:02 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/16 15:56:28 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/17 22:31:18 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
-
-void	free_node(t_list *node)
-{
-	free(node->move);
-	free(node);
-}
 
 void	delete_node(t_list **head, int *i)
 {

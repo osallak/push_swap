@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_free.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/07 20:38:21 by messalih          #+#    #+#             */
-/*   Updated: 2022/03/16 20:27:10 by osallak          ###   ########.fr       */
+/*   Created: 2022/03/17 16:31:14 by osallak           #+#    #+#             */
+/*   Updated: 2022/03/17 16:32:00 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include"push_swap.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdio.h>
-# include <fcntl.h>
-# define BUFFER_SIZE 1
+void	ft_free(t_stack *a, t_list *opt)
+{
+	t_stack	*tmp;
+	t_list	*tmp2;
 
-int		ft_strlen(char *str);
-int		ft_strchr(char *s, int c);
-char	*ft_strjoin(char *s1, char *s2);
-char	*get_next_line(int fd);
-
-#endif
+	if (a)
+	{
+		while (a)
+		{
+			tmp = a;
+			free(tmp);
+			a = a->next;
+		}
+	}
+	if (opt)
+	{	
+		while (opt)
+		{
+			tmp2 = opt;
+			free_node(tmp2);
+			opt = opt->next;
+		}
+	}
+}

@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   free_node.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/09 19:52:04 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/16 22:55:55 by osallak          ###   ########.fr       */
+/*   Created: 2022/03/17 22:31:31 by osallak           #+#    #+#             */
+/*   Updated: 2022/03/17 22:31:42 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/push_swap.h"
+#include"push_swap.h"
 
-int	main(int ac, char **av)
+void	free_node(t_list *node)
 {
-	t_stack	*a;
-	t_stack	*b;
-	char	*s;
-
-	a = init_list(check_double(convert_input(parser(ac, av))));
-	s = get_next_line(0);
-	printf("%s", s);
+	free(node->move);
+	free(node);
 }

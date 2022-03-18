@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:59:21 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/16 20:23:03 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/18 01:10:48 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ t_args		check_double(t_args args);
 bool		is_sorted(t_stack *stack);
 char		**parser(int ac, char **av);
 bool		ft_strcmp(char *s1, char *s2);
+void		ft_free(t_stack *a, t_list *opt);
 //lst functions
 t_stack		*ft_add_new(int content);
 t_list		*lstnew_opt(char *move);
@@ -98,4 +99,13 @@ void		check_ss(t_list **opt);
 void		check_rr(t_list **opt);
 //checker srcs
 char		*get_next_line(int fd);
+void		swap_bonus(t_stack *stack);
+void		ss_bonus(t_stack *a, t_stack *b);
+void		reverse_rotate_bonus(t_stack **a);
+void		rotate_bonus(t_stack *stack);
+void		rr_bonus(t_stack *a, t_stack *b);
+void		push_bonus(t_stack **a, t_stack **b);
+void		rrr_bonus(t_stack **a, t_stack **b);
+char		*get_next_line(int fd);
+
 #endif

@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 15:57:11 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/16 15:58:00 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/17 20:27:40 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,3 +67,31 @@ void	check_rr(t_list **opt)
 		i++;
 	}
 }
+
+// void	check_rrr(t_list **opt)
+// {
+// 	int		i;
+// 	t_list	*node;
+
+// 	node = *opt;
+// 	i = 0;
+// 	while (node && node->next)
+// 	{
+// 		if (ft_strcmp(node->move, "rra\n")
+// 			&& ft_strcmp(node->next->move, "rrb\n"))
+// 		{
+// 			opt_rrr(opt, &i, "rrr\n");
+// 			node = *opt;
+// 			continue ;
+// 		}
+// 		else if (ft_strcmp(node->move, "rrb\n")
+// 			&& ft_strcmp(node->next->move, "rra\n"))
+// 		{
+// 			opt_rrr(opt, &i, "rrr\n");
+// 			node = *opt;
+// 			continue ;
+// 		}
+// 		node = node->next;
+// 		i++;
+// 	}
+// }

@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 19:46:10 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/16 20:52:09 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/17 14:31:06 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*join_args(char **argv)
 		if (!*argv[i])
 		{
 			free(ret);
-			ft_print_error("Error : empty String");
+			ft_print_error("Error");
 		}
 		check_single_arg(argv[i], ret);
 		ret = join(ret, argv[i++]);

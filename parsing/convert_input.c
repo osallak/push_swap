@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 20:03:24 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/16 20:52:36 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/17 20:25:15 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	input_length(char **input)
 	return (len);
 }
 
-static void	ft_free(char **input, int i)
+static void	free_input(char **input, int i)
 {
 	while (input[i])
 		free(input[i++]);
@@ -45,8 +45,8 @@ t_args	convert_input(char **input)
 		num = ft_atoi(input[len]);
 		if (num > INT_MAX || num < INT_MIN)
 		{
-			ft_free(input, len);
-			ft_print_error("Error : Number out of range");
+			free_input(input, len);
+			ft_print_error("Error");
 		}
 		args[len] = (int)num;
 		free(input[len]);

@@ -1,18 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   checker_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/24 19:41:45 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/17 16:54:26 by osallak          ###   ########.fr       */
+/*   Created: 2022/03/18 00:54:45 by osallak           #+#    #+#             */
+/*   Updated: 2022/03/18 01:11:26 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/push_swap.h"
+#include"push_swap.h"
 
-void	push(t_stack **a, t_stack **b, char *move, t_list **opt)
+char	*get_next_line(int fd)
+{
+	char	line[8000000];
+	int		rd;
+	char	buff;
+	int		i;
+
+	rd = 1;
+	i = 0;
+	buff = 0;
+	line[i] = 0;
+	while (rd)
+	{
+		rd = read(fd, &buff, 1);
+		if (rd <= 0)
+			break ;
+		if (buff == '\n')
+			break ;
+		line[i++] = buff;
+	}
+	if (!*line)
+		return (NULL);
+	return (ft_strdup(line));
+}
+
+void	rr_bonus(t_stack *a, t_stack *b)
+{
+	rotate_bonus(a);
+	rotate_bonus(b);
+}
+
+void	push_bonus(t_stack **a, t_stack **b)
 {
 	t_stack	*node;
 
@@ -22,5 +53,4 @@ void	push(t_stack **a, t_stack **b, char *move, t_list **opt)
 	node = (*a)->next;
 	free(*a);
 	*a = node;
-	optimize(move, opt);
-}	
+}
