@@ -1,23 +1,20 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/osallak/Desktop/push_swap'
 cc -Wall -Wextra -Werror -c push_swap.c -I include -o push_swap.o
- 
 cc -Wall -Wextra -Werror -c srcs/ft_strjoin.c -I include -o srcs/ft_strjoin.o
 cc -Wall -Wextra -Werror -c srcs/ft_strlen.c -I include -o srcs/ft_strlen.o
- 
 cc -Wall -Wextra -Werror -c srcs/ft_allocate.c -I include -o srcs/ft_allocate.o
 cc -Wall -Wextra -Werror -c srcs/ft_isdigit.c -I include -o srcs/ft_isdigit.o
 cc -Wall -Wextra -Werror -c srcs/ft_strdup.c -I include -o srcs/ft_strdup.o
 cc -Wall -Wextra -Werror -c srcs/ft_atoi.c -I include -o srcs/ft_atoi.o
 cc -Wall -Wextra -Werror -c srcs/ft_strcmp.c -I include -o srcs/ft_strcmp.o
 cc -Wall -Wextra -Werror -c srcs/is_sorted.c -I include -o srcs/is_sorted.o
- 
 cc -Wall -Wextra -Werror -c srcs/display_moves.c -I include -o srcs/display_moves.o
 cc -Wall -Wextra -Werror -c srcs/ft_free.c -I include -o srcs/ft_free.o
 cc -Wall -Wextra -Werror -c srcs/free_node.c -I include -o srcs/free_node.o
 cc -Wall -Wextra -Werror -c srcs/parser.c -I include -o srcs/parser.o
-cc -Wall -Wextra -Werror -c parsing/ft_print_error.c -I include -o parsing/ft_print_error.o
  
+cc -Wall -Wextra -Werror -c parsing/ft_print_error.c -I include -o parsing/ft_print_error.o
 cc -Wall -Wextra -Werror -c parsing/args_join.c -I include -o parsing/args_join.o
 cc -Wall -Wextra -Werror -c parsing/check_input.c -I include -o parsing/check_input.o
 cc -Wall -Wextra -Werror -c parsing/ft_split.c -I include -o parsing/ft_split.o
@@ -25,27 +22,25 @@ cc -Wall -Wextra -Werror -c parsing/ft_split.c -I include -o parsing/ft_split.o
 cc -Wall -Wextra -Werror -c parsing/ft_substr.c -I include -o parsing/ft_substr.o
 cc -Wall -Wextra -Werror -c parsing/convert_input.c -I include -o parsing/convert_input.o
 cc -Wall -Wextra -Werror -c parsing/check_double.c -I include -o parsing/check_double.o
- 
 cc -Wall -Wextra -Werror -c lst_srcs/add_back.c -I include -o lst_srcs/add_back.o
 cc -Wall -Wextra -Werror -c lst_srcs/add_front.c -I include -o lst_srcs/add_front.o
 cc -Wall -Wextra -Werror -c lst_srcs/add_new.c -I include -o lst_srcs/add_new.o
+ 
 cc -Wall -Wextra -Werror -c lst_srcs/lstsize.c -I include -o lst_srcs/lstsize.o
 cc -Wall -Wextra -Werror -c lst_srcs/init_list.c -I include -o lst_srcs/init_list.o
 cc -Wall -Wextra -Werror -c lst_srcs/lst_last.c -I include -o lst_srcs/lst_last.o
 cc -Wall -Wextra -Werror -c lst_srcs/get_indexes.c -I include -o lst_srcs/get_indexes.o
-cc -Wall -Wextra -Werror -c moves/rotate.c -I include -o moves/rotate.o
  
+cc -Wall -Wextra -Werror -c moves/rotate.c -I include -o moves/rotate.o
 cc -Wall -Wextra -Werror -c moves/swap.c -I include -o moves/swap.o
 cc -Wall -Wextra -Werror -c moves/push.c -I include -o moves/push.o
 cc -Wall -Wextra -Werror -c moves/reverse_rotate.c -I include -o moves/reverse_rotate.o
 cc -Wall -Wextra -Werror -c sorting/sort_five.c -I include -o sorting/sort_five.o
- 
 cc -Wall -Wextra -Werror -c sorting/inverse_sort.c -I include -o sorting/inverse_sort.o
 cc -Wall -Wextra -Werror -c sorting/sort.c -I include -o sorting/sort.o
 cc -Wall -Wextra -Werror -c sorting/push_up_rotated.c -I include -o sorting/push_up_rotated.o
 cc -Wall -Wextra -Werror -c sorting/optimize.c -I include -o sorting/optimize.o
 cc -Wall -Wextra -Werror -c sorting/opt_utils.c -I include -o sorting/opt_utils.o
- 
 cc -Wall -Wextra -Werror -c sorting/opt_ss_rr.c -I include -o sorting/opt_ss_rr.o
 cc -Wall -Wextra -Werror push_swap.o srcs/ft_strjoin.o srcs/ft_strlen.o srcs/ft_allocate.o srcs/ft_isdigit.o srcs/ft_strdup.o srcs/ft_atoi.o srcs/ft_strcmp.o srcs/is_sorted.o srcs/display_moves.o srcs/ft_free.o srcs/free_node.o srcs/parser.o parsing/ft_print_error.o parsing/args_join.o parsing/check_input.o parsing/ft_split.o parsing/ft_substr.o parsing/convert_input.o parsing/check_double.o lst_srcs/add_back.o lst_srcs/add_front.o lst_srcs/add_new.o lst_srcs/lstsize.o lst_srcs/init_list.o lst_srcs/lst_last.o lst_srcs/get_indexes.o moves/rotate.o moves/swap.o moves/push.o moves/reverse_rotate.o sorting/sort_five.o sorting/inverse_sort.o sorting/sort.o sorting/push_up_rotated.o sorting/optimize.o sorting/opt_utils.o sorting/opt_ss_rr.o -o push_swap
 make: Leaving directory `/Users/osallak/Desktop/push_swap'

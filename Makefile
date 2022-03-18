@@ -79,7 +79,7 @@ all : $(NAME)
 $(NAME) : $(OBJS)
 		$(CC) $(CFLAGS) $^ -o $@
 
-bonus : $(NAME_B)
+bonus : $(NAME) $(NAME_B)
 
 $(NAME_B) : $(B_OBJS)
 		$(CC) $(CFLAGS) $^ -o $@

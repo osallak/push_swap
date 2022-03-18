@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 00:54:45 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/18 01:11:26 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/18 01:16:51 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ char	*get_next_line(int fd)
 		if (buff == '\n')
 			break ;
 		line[i++] = buff;
+		line[i] = 0;
 	}
 	if (!*line)
 		return (NULL);

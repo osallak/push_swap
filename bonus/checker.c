@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 19:52:04 by osallak           #+#    #+#             */
-/*   Updated: 2022/03/18 01:08:06 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/18 01:23:55 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	main(int ac, char **av)
 	while (true)
 	{
 		move = get_next_line(0);
-		if (!move || !*move || *move == '\n')
+		if (!move || !*move)
 			break ;
 		compare(move, &a, &b);
 	}
