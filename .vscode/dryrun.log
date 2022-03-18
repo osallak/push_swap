@@ -1,4 +1,4 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/osallak/Desktop/push_swap'
 cc -Wall -Wextra -Werror -c push_swap.c -I include -o push_swap.o
 cc -Wall -Wextra -Werror -c srcs/ft_strjoin.c -I include -o srcs/ft_strjoin.o
@@ -13,24 +13,20 @@ cc -Wall -Wextra -Werror -c srcs/display_moves.c -I include -o srcs/display_move
 cc -Wall -Wextra -Werror -c srcs/ft_free.c -I include -o srcs/ft_free.o
 cc -Wall -Wextra -Werror -c srcs/free_node.c -I include -o srcs/free_node.o
 cc -Wall -Wextra -Werror -c srcs/parser.c -I include -o srcs/parser.o
- 
 cc -Wall -Wextra -Werror -c parsing/ft_print_error.c -I include -o parsing/ft_print_error.o
 cc -Wall -Wextra -Werror -c parsing/args_join.c -I include -o parsing/args_join.o
 cc -Wall -Wextra -Werror -c parsing/check_input.c -I include -o parsing/check_input.o
 cc -Wall -Wextra -Werror -c parsing/ft_split.c -I include -o parsing/ft_split.o
- 
 cc -Wall -Wextra -Werror -c parsing/ft_substr.c -I include -o parsing/ft_substr.o
 cc -Wall -Wextra -Werror -c parsing/convert_input.c -I include -o parsing/convert_input.o
 cc -Wall -Wextra -Werror -c parsing/check_double.c -I include -o parsing/check_double.o
 cc -Wall -Wextra -Werror -c lst_srcs/add_back.c -I include -o lst_srcs/add_back.o
 cc -Wall -Wextra -Werror -c lst_srcs/add_front.c -I include -o lst_srcs/add_front.o
 cc -Wall -Wextra -Werror -c lst_srcs/add_new.c -I include -o lst_srcs/add_new.o
- 
 cc -Wall -Wextra -Werror -c lst_srcs/lstsize.c -I include -o lst_srcs/lstsize.o
 cc -Wall -Wextra -Werror -c lst_srcs/init_list.c -I include -o lst_srcs/init_list.o
 cc -Wall -Wextra -Werror -c lst_srcs/lst_last.c -I include -o lst_srcs/lst_last.o
 cc -Wall -Wextra -Werror -c lst_srcs/get_indexes.c -I include -o lst_srcs/get_indexes.o
- 
 cc -Wall -Wextra -Werror -c moves/rotate.c -I include -o moves/rotate.o
 cc -Wall -Wextra -Werror -c moves/swap.c -I include -o moves/swap.o
 cc -Wall -Wextra -Werror -c moves/push.c -I include -o moves/push.o
