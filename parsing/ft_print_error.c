@@ -6,7 +6,7 @@
 /*   By: osallak <osallak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 20:52:54 by osallak           #+#    #+#             */
-/*   Updated: 2022/02/20 15:20:36 by osallak          ###   ########.fr       */
+/*   Updated: 2022/03/19 10:15:57 by osallak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_print_error(char *s)
 {
+	if (!s)
+		exit(0);
 	while (*s)
 		write (1, s++, 1);
 	write (1, "\n", 1);

@@ -1,5 +1,5 @@
 NAME = push_swap
-NAME_B = checker_bonus
+NAME_B = checker
 INC = include
 SRCS = push_swap.c \
 		srcs/ft_strjoin.c\
